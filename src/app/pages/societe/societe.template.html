@@ -1,0 +1,41 @@
+<div>
+    <div class="row">
+        <div class="col-lg-10 col-md-10">
+            <div class="form-group">
+                <input [(ngModel)]="searchCode" class="form-control" id="input01" placeholder="Code" type="text">
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2">
+            <div class="form-group">
+                <button (click)="search()" class="btn btn-success " type="button">Actualiser</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-3">
+            <ba-card title="Actions en Vente">
+                <h1 style="text-align: center">{{infos.totalVente}}</h1>
+            </ba-card>
+            <ba-card title="Actions en Achat">
+                <h1 style="text-align: center">{{infos.totalAchat}}</h1>
+            </ba-card>
+            <ba-card title="Moyenne en Vente">
+                <h1 style="text-align: center">{{infos.AVGVente | number : '1.2-2'}}</h1>
+            </ba-card>
+            <ba-card title="Moyenne en Achat">
+                <h1 style="text-align: center">{{infos.AVGAchat | number : '1.2-2'}}</h1>
+            </ba-card>
+            <ba-card title="Estimation">
+                <h1 style="text-align: center">{{infos.estimation | number : '1.2-2'}}</h1>
+            </ba-card>
+        </div>
+        <div class="col-lg-9 col-md-9">
+            <ba-card title="Liste des Societes" baCardClass="with-scroll table-panel">
+                <hover-table (onEvent)="loadOrdres($event)" [columns]="columns" [data]="societes"
+                             [button]="'Ordres'"></hover-table>
+                <pagination (onLoad)="loadPage($event)" [totalPages]="totalPages"></pagination>
+            </ba-card>
+            <ordre [code]="code"></ordre>
+        </div>
+    </div>
+</div>

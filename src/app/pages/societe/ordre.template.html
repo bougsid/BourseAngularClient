@@ -1,0 +1,5 @@
+<ba-card *ngIf="code" title="Liste des Ordres de Societe Numéro {{code}}" baCardClass="with-scroll table-panel">
+    <hover-table [columns]="columns" [data]="ordres"></hover-table>
+    <pagination (onLoad)="loadPage($event)" [totalPages]="totalPages"></pagination>
+    <!--<pagination (onLoad)="loadPage($event)" [totalPages]="totalPages"></pagination>-->
+</ba-card>

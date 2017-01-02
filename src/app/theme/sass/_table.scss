@@ -203,6 +203,18 @@ input.search-input {
   margin-left: 0;
 }
 
+.tr-active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.achat {
+  background-color: green;
+}
+
+.vente {
+  background-color: red;
+}
+
 .table {
   & > thead {
     & > tr {
@@ -236,7 +248,7 @@ input.search-input {
 .table-bordered > tfoot > tr > th,
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td{
+.table-bordered > tfoot > tr > td {
   border: 1px solid $border-light;
 }
 
@@ -255,18 +267,23 @@ input.search-input {
     }
   }
 }
+
 .table > tbody > tr.primary > td {
   @include color-row($primary);
 }
+
 .table > tbody > tr.success > td {
   @include color-row($success);
 }
+
 .table > tbody > tr.warning > td {
   @include color-row($warning);
 }
+
 .table > tbody > tr.danger > td {
   @include color-row($danger);
 }
+
 .table > tbody > tr.info > td {
   @include color-row($info);
 }
@@ -291,21 +308,21 @@ th {
 .table-striped > tbody > tr > td {
   border: none;
 }
+
 .pagination > li > a,
-.pagination > li > span{
+.pagination > li > span {
   color: $default-text;
   border-color: $border;
 }
 
-
 .pagination > li:first-of-type > a,
-.pagination > li:first-of-type > span{
+.pagination > li:first-of-type > span {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
 .pagination > li:last-of-type > a,
-.pagination > li:last-of-type > span{
+.pagination > li:last-of-type > span {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -316,20 +333,20 @@ th {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: rgba(0,0,0,.3)!important;
-  border-color: $border!important;
+  background-color: rgba(0, 0, 0, .3) !important;
+  border-color: $border !important;
 }
 
 .pagination > li > a:hover,
 .pagination > li > span:hover,
 .pagination > li > a:focus,
-.pagination > li > span:focus{
-  background-color: rgba(0,0,0,.2);
+.pagination > li > span:focus {
+  background-color: rgba(0, 0, 0, .2);
   color: $default-text;
 }
 
 .page-item.disabled .page-link, .page-item.disabled .page-link:focus, .page-item.disabled .page-link:hover {
-  background-color: rgba(255,255,255,.1);
+  background-color: rgba(255, 255, 255, .1);
   color: $default-text;
 }
 

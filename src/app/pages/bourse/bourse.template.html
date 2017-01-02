@@ -1,0 +1,27 @@
+<div class="horizontal-scroll">
+    <table class="table table-hover">
+        <thead>
+        <tr class="black-muted-bg">
+            <th class="align-right">Code</th>
+            <th class="align-right">Name</th>
+            <th class="align-right">Actions en Vente</th>
+            <th class="align-right">Actions en Achat</th>
+            <th class="align-right">Moyenne en Vente</th>
+            <th class="align-right">Moyenne en Achat</th>
+            <th class="align-right">Estimation</th>
+            <th class="table-arr"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let element of societes, let i=index" class="no-top-border">
+            <td class="align-right">{{element.code}}</td>
+            <td class="align-right">{{element.name}}</td>
+            <td class="align-right">{{element.infos.totalVente}}</td>
+            <td class="align-right">{{element.infos.totalAchat}}</td>
+            <td class="align-right">{{element.infos.AVGVente | number : '1.2-2'}}</td>
+            <td class="align-right">{{element.infos.AVGAchat | number : '1.2-2'}}</td>
+            <td class="align-right">{{element.infos.estimation | number : '1.2-2'}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
